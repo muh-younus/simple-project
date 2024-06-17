@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 
+        01
+    </title>
+
+    <style>
+
+        .car{
+
+            transition: all 3s linear;
+        }
+    </style>
+
+</head>
+<body>
+ 
+   <img class="car" width="250" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKzI7LTWVzvgxPP1cUfSnR6WHWaDxybg6JRg&s" alt="Image not available">
+
+  <br>
+  <button class="btn" style="border: 5px black solid; color: red; background: white; display: block; margin: auto;">clicked me</button>
+
+    
+    <script>
+        
+       var head = document.querySelector(".car");
+       var button= document.querySelector(".btn");
+
+       button.addEventListener("click", () => {
+
+        if(head.style.transform == "translateX(0px)"){
+
+            head.style.transform = "translateX(500px)";
+        }
+        else{
+            head.style.transform = "translateX(0px)";
+        }
+
+       });
+       
+let count=0;
+       window.addEventListener("mousemove", () => {
+        
+        count+=10;
+
+        head.style.transform = `translateX(${count}px)`;
+
+       });
+       
+
+       
+       </script>
+</body>
+</html>
